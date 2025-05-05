@@ -25,6 +25,12 @@ header {
   border-bottom: 1px solid var(--neon-pink);
   margin-bottom: 2rem;
 }
+.tagline {
+  color: var(--neon-blue);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 8px var(--neon-blue);
+}
 
 /* ===== LOGO ===== */
 #logo {
@@ -35,7 +41,7 @@ header {
 .glow-logo {
   filter: drop-shadow(0 0 5px #0ff0fc) drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 15px #bc13fe);
   max-width: 350px;
-  animation: logo-pulse 1s infinite alternate;
+  animation: logo-pulse 1.5s infinite alternate;
 }
 
 @keyframes logo-pulse {
@@ -154,4 +160,9 @@ iframe{
   text-align: left;
   margin: 0.5rem 0;
   line-height: 1.5;
+}
+
+/* Sätter färg på det som är BOLD */
+.movie-info b {
+  color: var(--neon-blue);
 }
