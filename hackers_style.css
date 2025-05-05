@@ -1,0 +1,157 @@
+/* ===== BASE STYLES ===== */
+:root {
+  --neon-blue: #0ff0fc;
+  --neon-pink: #ff00ff;
+  --neon-purple: #bc13fe;
+  --dark-bg: #0d0208;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: white;
+  font-family: "Share Tech Mono", monospace;
+  margin: 5px;
+  padding: 5px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(to right, #0d0208, #1a0933);
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--neon-pink);
+  margin-bottom: 2rem;
+}
+
+/* ===== LOGO ===== */
+#logo {
+  max-width: 300px;
+  filter: drop-shadow(0 0 20px var(--neon-blue));
+}
+
+.glow-logo {
+  filter: drop-shadow(0 0 5px #0ff0fc) drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 15px #bc13fe);
+  max-width: 350px;
+  animation: logo-pulse 1s infinite alternate;
+}
+
+@keyframes logo-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* ===== EFFECTS ===== */
+.blink {
+  animation: blink 1.5s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(to right, #1a0933, #0d0208);
+  color: white;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid var(--neon-blue);
+}
+
+.footer-text {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  line-height: 0.6;
+}
+
+/* ===== LINKS ===== */
+.hackers-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hackers-links a {
+  color: var(--neon-pink);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--neon-purple);
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.hackers-links a:hover {
+  background-color: var(--neon-purple);
+  color: white;
+  box-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* ===== YOUTUBE IFRAME===== */
+iframe {
+  box-shadow: 0 0 30px var(--neon-blue),
+    0 0 40px rgba(0, 255, 65, 0.2);
+  transition: all 0.3s;
+  filter: brightness(1.1);
+}
+
+iframe:hover {
+  box-shadow: 0 0 40px var(--neon-blue),
+    0 0 60px rgba(0, 255, 65, 0.3);
+  filter: brightness(1.2);
+}
+iframe{
+ width: 760px;
+ height: 515px;
+ justify-content: center;
+}
+
+/* ===== YOUTUBE CONTAINER ===== */
+.video-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.movie-info {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Rubriker i movie-info (behåller centrering trots vänsterjusterad container) */
+.movie-info h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Stycken i movie-info */
+.movie-info p {
+  text-align: left;
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
